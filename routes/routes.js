@@ -56,6 +56,16 @@ module.exports = {
                         message: `User ID: ${req.params.id} updated successfully!`
                     }).type('application/json');
                 }
+            },
+            {
+                method: 'DELETE',
+                path: '/users/{id}',
+                handler: async (req, res) =>{
+                    return res.response({
+                        message: `User ID: ${req.params.id} deleted successfully!`
+                    }).type('application/json');
+                }
+
             }
         ]);
     }
