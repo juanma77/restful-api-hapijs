@@ -7,6 +7,10 @@ nuestro servidor. */
 propiedad "path" tiene el nombre del parametro que
 recibimos (name); cada parametro se declara entre llaves, 
 mientras que el signo "?" nos dice que este parametro */
+
+/* En el método de post recibimos parametros a través de 
+req.payload.nombre_de_parametro; data es el objeto que 
+incluimos en la respuesta */
 module.exports = {
     name: 'ApiRoutes',
     register: async (server, options) =>{
@@ -24,6 +28,19 @@ module.exports = {
                 handler: async (req, res) =>{
                     const name = (req.params.name) ? req.params.name : 'guess';
                     return `Hello ${name}!`;
+                }
+            },
+            {
+                method: 'POST',
+                path: '/users',
+                handler: async (req, res) =>{
+                    const newUser = {
+                        name: req.payload.name,
+                        lastName: req.payload.lastName
+                    };
+                    return res.response({
+                        data: newUser
+                    }).type('application/json');
                 }
             }
         ]);
