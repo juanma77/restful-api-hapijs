@@ -1,4 +1,5 @@
 const Hapi = require('hapi');
+const routes = require('../routes/routes');
 
 // Creamos una nueva instancia del servidor hapi 
 const server = Hapi.server({
@@ -9,6 +10,7 @@ const server = Hapi.server({
 
 const initServer = async () => {
     try{
+        await server.register(routes); 
         await server.start();
         console.log(`Server running on port: ${server.info.uri}`);
         
