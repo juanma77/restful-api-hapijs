@@ -1,0 +1,20 @@
+{
+  "name": "restful-api-hapijs",
+  "version": "1.0.0",
+  "description": "A RESTful API for CRUD operations using HapiJS Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanma77/restful-api-hapijs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanma77/restful-api-hapijs/issues"
+  },
+  "homepage": "https://github.com/juanma77/restful-api-hapijs#readme"
+}
