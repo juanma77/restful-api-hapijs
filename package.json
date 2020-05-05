@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/juanma77/restful-api-hapijs/issues"
   },
-  "homepage": "https://github.com/juanma77/restful-api-hapijs#readme"
+  "homepage": "https://github.com/juanma77/restful-api-hapijs#readme",
+  "dependencies": {
+    "hapi": "^18.1.0"
+  }
 }
