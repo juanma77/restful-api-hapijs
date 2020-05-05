@@ -42,6 +42,20 @@ module.exports = {
                         data: newUser
                     }).type('application/json');
                 }
+            },
+            {
+                method: 'PUT',
+                path: '/users/{id}',
+                handler: async (req,res) =>{
+                    const newUser = {
+                        name: req.payload.name,
+                        lastName: req.payload.lastName
+                    };
+                    return res.response({
+                        data: newUser,
+                        message: `User ID: ${req.params.id} updated successfully!`
+                    }).type('application/json');
+                }
             }
         ]);
     }
